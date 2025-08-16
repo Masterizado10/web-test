@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #e63946;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.plato {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.plato img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.plato:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+footer {
+  text-align: center;
+  background: #222;
+  color: #fff;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.oculto {
+  display: none;
+}
+
+.subplatos {
+  padding: 20px;
+  text-align: center;
+}
+
+.subplatos h2 {
+  margin-bottom: 20px;
+}
+
+.subplatos button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #e63946;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subplatos button:hover {
+  background: #d62828;
+}

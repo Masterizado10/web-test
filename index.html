@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Platos de Comida</title>
+  <!-- asegúrate que este archivo styles.css esté en la misma carpeta -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🍽️ Mis Platos de Comida</h1>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="galeria" class="galeria">
+    <div class="plato" onclick="mostrarSubplatos('pasta')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Spaghetti_al_Pomodoro.JPG" alt="Pasta">
+      <h3>Pasta Italiana</h3>
+      <p>Deliciosa pasta al estilo clásico.</p>
+    </div>
+
+    <div class="plato" onclick="mostrarSubplatos('sushi')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Sushi_platter.jpg" alt="Sushi">
+      <h3>Sushi Japonés</h3>
+      <p>Fresco y variado surtido de sushi.</p>
+    </div>
+
+    <div class="plato" onclick="mostrarSubplatos('tacos')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Authentic_Mexican_tacos_al_pastor.jpg" alt="Tacos">
+      <h3>Tacos Mexicanos</h3>
+      <p>El auténtico sabor de México.</p>
+    </div>
+  </section>
+
+  <section id="subplatos-pasta" class="subplatos oculto">
+    <h2>🍝 Variedades de Pasta</h2>
+    <div class="galeria">
+      <div class="plato">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Spaghetti_carbonara.jpg" alt="Spaghetti">
+        <h3>Spaghetti Carbonara</h3>
+      </div>
+      <div class="plato">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Lasagne_-_stonesoup.jpg" alt="Lasagna">
+        <h3>Lasagna</h3>
+      </div>
+      <div class="plato">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Ravioli_di_ricotta_e_spinaci.jpg" alt="Ravioli">
+        <h3>Ravioli</h3>
+      </div>
+    </div>
+    <button onclick="cerrarSubplatos()">⏪ Volver</button>
+  </section>
+
+  <section id="subplatos-sushi" class="subplatos oculto">
+    <h2>🍣 Variedades de Sushi</h2>
+    <div class="galeria">
+      <div class="plato">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Sushi_platter.jpg" alt="Nigiri">
+        <h3>Nigiri Sushi</h3>
+      </div>
+      <div class="plato">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Maki_Sushi.jpg" alt="Maki">
+        <h3>Maki Sushi</h3>
+      </div>
+      <div class="plato">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Sashimi_01.jpg" alt="Sashimi">
+        <h3>Sashimi</h3>
+      </div>
+    </div>
+    <button onclick="cerrarSubplatos()">⏪ Volver</button>
+  </section>
+
+  <section id="subplatos-tacos" class="subplatos oculto">
+    <h2>🌮 Variedades de Tacos</h2>
+    <div class="galeria">
+      <div class="plato">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Tacos_de_carnitas.jpg" alt="Carnitas">
+        <h3>Tacos de Carnitas</h3>
+      </div>
+      <div class="plato">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Tacos_al_pastor.jpg" alt="Pastor">
+        <h3>Tacos al Pastor</h3>
+      </div>
+      <div class="plato">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Tacos_de_barbacoa.jpg" alt="Barbacoa">
+        <h3>Tacos de Barbacoa</h3>
+      </div>
+    </div>
+    <button onclick="cerrarSubplatos()">⏪ Volver</button>
+  </section>
+
+  <footer id="contacto">
+    <p>Contacto: misplatos@ejemplo.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
