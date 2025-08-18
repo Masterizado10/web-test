@@ -1,16 +1,26 @@
-
 window.onload = () => {
   alert("¡Bienvenido a Mis Platos de Comida!");
 };
 
 function mostrarSubplatos(tipo) {
-  if (tipo === 'pasta') {
-    document.getElementById('galeria').style.display = 'none';
-    document.getElementById('subplatos-pasta').style.display = 'block';
-  }
+  // Ocultar galería principal
+  document.getElementById('galeria').style.display = 'none';
+
+  // Ocultar todas las subgalerías
+  document.getElementById('subplatos-pasta').style.display = 'none';
+  document.getElementById('subplatos-sushi').style.display = 'none';
+  document.getElementById('subplatos-tacos').style.display = 'none';
+
+  // Mostrar la seleccionada
+  document.getElementById('subplatos-' + tipo).style.display = 'block';
 }
 
 function cerrarSubplatos() {
-  document.getElementById('galeria').style.display = 'flex';
+  // Ocultar todas
   document.getElementById('subplatos-pasta').style.display = 'none';
+  document.getElementById('subplatos-sushi').style.display = 'none';
+  document.getElementById('subplatos-tacos').style.display = 'none';
+
+  // Mostrar principal
+  document.getElementById('galeria').style.display = 'flex';
 }
