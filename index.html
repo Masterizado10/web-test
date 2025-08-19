@@ -3,108 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mis Platos de Comida</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Tienda Retro Games</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>🍽️ Mis Platos de Comida</h1>
+    <h1>🎮 Retro Games Store</h1>
     <nav>
-      <a href="#">Inicio</a>
-      <a href="#galeria">Galería</a>
-      <a href="#contacto">Contacto</a>
+      <button id="verCarrito">🛒 Ver carrito</button>
     </nav>
   </header>
 
-  <!-- Galería principal -->
-  <section id="galeria" class="galeria">
-    <div class="plato" onclick="mostrarSubplatos('pasta')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Spaghetti_al_Pomodoro.JPG" alt="Pasta">
-      <h3>Pasta Italiana</h3>
-      <p>Deliciosa pasta al estilo clásico.</p>
+  <main>
+    <h2>Catálogo de Juegos Clásicos</h2>
+    <div class="catalogo" id="catalogo">
+      <!-- Los productos se generarán aquí desde JS -->
     </div>
+  </main>
 
-    <div class="plato" onclick="mostrarSubplatos('sushi')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Sushi_platter.jpg" alt="Sushi">
-      <h3>Sushi Japonés</h3>
-      <p>Fresco y variado surtido de sushi.</p>
+  <aside id="carritoModal" class="modal oculto">
+    <div class="modal-contenido">
+      <h2>Tu Carrito</h2>
+      <ul id="listaCarrito"></ul>
+      <p id="total"></p>
+      <button id="cerrarCarrito">Cerrar</button>
+      <button id="comprar">Finalizar Compra</button>
     </div>
+  </aside>
 
-    <div class="plato" onclick="mostrarSubplatos('tacos')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Authentic_Mexican_tacos_al_pastor.jpg" alt="Tacos">
-      <h3>Tacos Mexicanos</h3>
-      <p>El auténtico sabor de México.</p>
-    </div>
-  </section>
-
-  <!-- Subplatos de Pasta -->
-  <section id="subplatos-pasta" class="subplatos oculto">
-    <h2>🍝 Variedades de Pasta</h2>
-    <div class="galeria">
-      <div class="plato">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Spaghetti_carbonara.jpg" alt="Carbonara">
-        <h3>Spaghetti Carbonara</h3>
-      </div>
-      <div class="plato">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Lasagne_-_stonesoup.jpg" alt="Lasagna">
-        <h3>Lasagna</h3>
-      </div>
-      <div class="plato">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Ravioli_di_ricotta_e_spinaci.jpg" alt="Ravioli">
-        <h3>Ravioli</h3>
-      </div>
-    </div>
-    <button onclick="cerrarSubplatos()">⏪ Volver</button>
-  </section>
-
-  <!-- Subplatos de Sushi -->
-  <section id="subplatos-sushi" class="subplatos oculto">
-    <h2>🍣 Variedades de Sushi</h2>
-    <div class="galeria">
-      <div class="plato">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Tokyo_Sushi.jpg" alt="Nigiri">
-        <h3>Nigiri Sushi</h3>
-      </div>
-      <div class="plato">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Makisushi.jpg" alt="Maki">
-        <h3>Maki Sushi</h3>
-      </div>
-      <div class="plato">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Sashimi_2.jpg" alt="Sashimi">
-        <h3>Sashimi</h3>
-      </div>
-    </div>
-    <button onclick="cerrarSubplatos()">⏪ Volver</button>
-  </section>
-
-  <!-- Subplatos de Tacos -->
-  <section id="subplatos-tacos" class="subplatos oculto">
-    <h2>🌮 Variedades de Tacos</h2>
-    <div class="galeria">
-      <div class="plato">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Tacos_de_carnitas_en_Mexico.jpg" alt="Carnitas">
-        <h3>Tacos de Carnitas</h3>
-      </div>
-      <div class="plato">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Tacos_al_pastor.jpg" alt="Pastor">
-        <h3>Tacos al Pastor</h3>
-      </div>
-      <div class="plato">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Tacos_de_barbacoa.jpg" alt="Barbacoa">
-        <h3>Tacos de Barbacoa</h3>
-      </div>
-    </div>
-    <button onclick="cerrarSubplatos()">⏪ Volver</button>
-  </section>
-
-  <!-- Contacto -->
-  <footer id="contacto">
-    <h2>📍 Nuestro Restaurante</h2>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Restaurant_interior.jpg" alt="Restaurante genérico" width="400">
-    <p><strong>Dirección:</strong> Av. Gourmet 123, Ciudad Sabrosa</p>
-    <p><strong>Teléfono:</strong> +54 11 1234-5678</p>
-    <p><strong>Email:</strong> contacto@misplatos.com</p>
-    <p><strong>Horario:</strong> Lunes a Domingo, 12:00 - 23:00</p>
+  <footer>
+    <p>&copy; 2024 Retro Games Store</p>
   </footer>
 
   <script src="script.js"></script>
