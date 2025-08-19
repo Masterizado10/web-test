@@ -3,24 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda Retro Games</title>
+  <title>Tienda Retro Consolas</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>🎮 Retro Games Store</h1>
+    <h1>🎮 Retro Consolas Store</h1>
     <nav>
-      <button id="verCarrito">🛒 Ver carrito</button>
+      <button class="nav-item" data-consola="ps2">PS2</button>
+      <button class="nav-item" data-consola="xbox">Xbox Clásica</button>
+      <button class="nav-item" data-consola="gamecube">GameCube</button>
+      <button class="nav-item" data-consola="ps1">PS1</button>
+      <button id="verCarrito">🛒 Carrito</button>
     </nav>
   </header>
 
   <main>
-    <h2>Catálogo de Juegos Clásicos</h2>
-    <div class="catalogo" id="catalogo">
-      <!-- Los productos se generarán aquí desde JS -->
-    </div>
+    <h2 id="tituloConsola">Selecciona una consola</h2>
+    <div class="catalogo" id="catalogo"></div>
   </main>
 
+  <!-- Modal Carrito -->
   <aside id="carritoModal" class="modal oculto">
     <div class="modal-contenido">
       <h2>Tu Carrito</h2>
@@ -32,7 +35,7 @@
   </aside>
 
   <footer>
-    <p>&copy; 2024 Retro Games Store</p>
+    <p>&copy; 2024 Retro Consolas Store</p>
   </footer>
 
   <script src="script.js"></script>
